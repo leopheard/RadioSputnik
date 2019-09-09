@@ -18,8 +18,8 @@ url11 = "https://www.spreaker.com/show/1843710/episodes/feed" #UNANIMOUSDISSENT
 #livestreamurl = "http://icecast-ruvr.cdnvideo.ru/rian.voiceusa"
 #livealt"https://nfw.ria.ru/flv/audio.aspx?ID=40881855&type=mp3"
 
-"http://audio1.video.ria.ru/voiceeng" English
-"http://icecast-ruvr.cdnvideo.ru/rian.voiceusa"USA
+#"http://audio1.video.ria.ru/voiceeng" English
+#"http://icecast-ruvr.cdnvideo.ru/rian.voiceusa"USA
 
 @plugin.route('/')
 def main_menu():

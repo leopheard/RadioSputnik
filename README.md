@@ -1,6 +1,6 @@
-<a href="">www.sputniknews.com</a> Radio Sputnik podcasts.<br>
+<a href="www.sputniknews.com">Radio Sputnik</a> podcasts.<br>
 
-<a href="kodi.tv">KODI<a> / XBMC / Firestick addon for the <a href="">www.sputniknews.com</a> Radio Sputnik podcasts.<br>
+<a href="kodi.tv">KODI<a> / XBMC / Firestick addon for the <a href="www.sputniknews.com">Radio Sputnik</a> podcasts.<br>
 
 Sputnik radio is broadcasting in 30 languages, total of over 800 hours a day, covering over 130 cities and 34 countries. Sputnik’s radio broadcasting formats: FM, digital DAB/DAB+, HD-Radio, mobile, Internet.<br>
 

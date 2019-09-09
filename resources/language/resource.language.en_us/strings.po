@@ -1,0 +1,67 @@
+# Kodi Media Center language file
+# Addon Provider: leopheard
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: leopheard@gmail.com\n"
+"POT-Creation-Date: 2019-08-12 HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-08-12 HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#30099"
+msgid "Sputnik - livestreams"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Radio Sputnik"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Brave New World"
+msgstr ""
+
+msgctxt "#30003"
+msgid "By Any Means Necessary"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Critical Hour"
+msgstr ""
+
+msgctxt "#30005"
+msgid "Fault Lines"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Loud & Clear"
+msgstr ""
+
+msgctxt "#30007"
+msgid "Sound Clips"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Specials"
+msgstr ""
+
+msgctxt "#30009"
+msgid "Sputnik Interviews"
+msgstr ""
+
+
+msgctxt "#30010"
+msgid "Sputnik Trending"
+msgstr ""
+
+
+msgctxt "#30011"
+msgid "Unanimous Dissent"
+msgstr ""
+
+# empty string with id 32003

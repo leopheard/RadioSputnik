@@ -180,7 +180,7 @@ def compile_playable_podcast2(playable_podcast2):
     })
     return items
 
-def get_playable_podcast1(soup1):
+def get_playable_podcast3(soup3):
     subjects = []
     for content in soup3.find_all('item'):
         try:        
@@ -287,7 +287,7 @@ def get_playable_podcast6(soup6):
     return subjects
 def compile_playable_podcast6(playable_podcast6):
     items = []
-    for podcast in playable_podcast1:
+    for podcast in playable_podcast6:
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
@@ -316,7 +316,7 @@ def get_playable_podcast7(soup7):
     return subjects
 def compile_playable_podcast7(playable_podcast7):
     items = []
-    for podcast in playable_podcast1:
+    for podcast in playable_podcast7:
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
@@ -345,7 +345,7 @@ def get_playable_podcast8(soup8):
     return subjects
 def compile_playable_podcast8(playable_podcast8):
     items = []
-    for podcast in playable_podcast1:
+    for podcast in playable_podcast8:
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],
@@ -403,7 +403,7 @@ def get_playable_podcast10(soup10):
     return subjects
 def compile_playable_podcast10(playable_podcast10):
     items = []
-    for podcast in playable_podcast1:
+    for podcast in playable_podcast10:
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],

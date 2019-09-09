@@ -80,7 +80,7 @@ def main_menu():
 def episodes0():
     #soup = criminalpodcast.compile_new_to_criminal(URL)
     playable_podcast0 = mainaddon.get_playable_podcast0
-    items = criminalpodcast.compile_playable_podcast0(playable_podcast0)
+    items = mainaddon.compile_playable_podcast0(playable_podcast0)
     return items
 
 @plugin.route('/episodes1/')

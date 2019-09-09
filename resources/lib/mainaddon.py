@@ -91,7 +91,7 @@ def get_soup11(url11):
     return soup11
 get_soup11("https://www.spreaker.com/show/1843710/episodes/feed")
 
-def episodes0(soup0):
+def get_playable_podcast0(soup0):
     subjects = []
     item = {
                 'url': link,
@@ -101,7 +101,7 @@ def episodes0(soup0):
         }
     subjects.append(item)
     return subjects
-def episodes0(compile_episodes0):
+def compile_playable_podcast0(playable_podcast0):
     items = [{
 		    'label': 'Sputnik - USA',
         	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',

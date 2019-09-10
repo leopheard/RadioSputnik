@@ -59,9 +59,12 @@ msgctxt "#30010"
 msgid "Sputnik Trending"
 msgstr ""
 
-
 msgctxt "#30011"
 msgid "Unanimous Dissent"
+msgstr ""
+
+msgctxt "#30012"
+msgid "Radio Trendstorm"
 msgstr ""
 
 # empty string with id 32003

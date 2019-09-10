@@ -11,8 +11,15 @@ url6 = "https://www.spreaker.com/show/1610382/episodes/feed" #LOUDANDCLEAR
 url7 = "https://www.spreaker.com/show/1949270/episodes/feed" #SOUNDCLIPS
 url8 = "https://www.spreaker.com/show/2795762/episodes/feed" #SPECIALS
 url9 = "https://www.spreaker.com/show/1843699/episodes/feed" #SPUTNIKINTERVIEWS
-url10 = "https://apps.apple.com/us/app/sputnik-trending/id1093760760" #SPUTNIKTRENDING
 url11 = "https://www.spreaker.com/show/1843710/episodes/feed" #UNANIMOUSDISSENT
+url12 = "https://sputniknews.com/export/rss2/podcast/radio_trendstorm/" #RADIOTRENDSTORM
+
+def get_soup0(url0):
+    page = requests.get(url0)
+    soup0 = BeautifulSoup(page.text, 'html.parser')
+    print("type: ", type(soup0))
+    return soup0
+get_soup0("http://feeds.soundcloud.com/users/soundcloud:users:128016508/sounds.rss")
 
 def get_soup1(url1):
     page = requests.get(url1)
@@ -77,13 +84,6 @@ def get_soup9(url9):
     return soup9
 get_soup9("https://www.spreaker.com/show/1843699/episodes/feed")
 
-def get_soup10(url10):
-    page = requests.get(url10)
-    soup10 = BeautifulSoup(page.text, 'html.parser')
-    print("type: ", type(soup10))
-    return soup10
-get_soup10("https://apps.apple.com/us/app/sputnik-trending/id1093760760")
-
 def get_soup11(url11):
     page = requests.get(url11)
     soup11 = BeautifulSoup(page.text, 'html.parser')
@@ -91,36 +91,83 @@ def get_soup11(url11):
     return soup11
 get_soup11("https://www.spreaker.com/show/1843710/episodes/feed")
 
-def get_playable_podcast0:
+def get_new_to_criminal(soup):
     subjects = []
     item = {
                 'url': link,
                 'title': title,
 #                'desc': desc,
-                'thumbnail': thumbnail,
+                'thumbnail': thumbnail
         }
     subjects.append(item)
     return subjects
-def compile_playable_podcast0(playable_podcast0):
+def compile_new_to_criminal(compile_ntc):
     items = [{
-		    'label': 'Sputnik - USA',
+		    'label': 'Sputnik livestream - USA',
         	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
         	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voiceusa',
         	    'is_playable': True},
-           	    {'label': 'Sputnik - English',
+           	    {'label': 'Sputnik livestream - English',
         	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
         	    'path': 'http://audio1.video.ria.ru/voiceeng',
         	    'is_playable': True},
-		    {'label': 'Sputnik - French',
+		    {'label': 'Sputnik livestream - French',
         	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
         	    'path': 'https://nfw.ria.ru/flv/audio.aspx?ID=40881855&type=mp3',
         	    'is_playable': True},
-		    {'label': 'Sputnik - German',
+		    {'label': 'Sputnik livestream - Spanish',
         	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
-        	    'path': 'http://audio1.video.ria.ru/voiceeng',
+        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voicespa',
+        	    'is_playable': True},
+		    {'label': 'Sputnik livestream - Russian',
+        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voicerus',
+        	    'is_playable': True},
+		    {'label': 'Sputnik livestream - Chinese',
+        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voicechi',
+        	    'is_playable': True},
+		    {'label': 'Sputnik livestream - German',
+        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voiceger',
+        	    'is_playable': True},
+		    {'label': 'Sputnik livestream - Portugese',
+        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voicepor',
         	    'is_playable': True},
 ]
     return items
+
+#def get_playable_podcast0:
+#    subjects = []
+#    item = {
+#                'url': link,
+#                'title': title,
+#                'desc': desc,
+#                'thumbnail': thumbnail,
+#        }
+#    subjects.append(item)
+#    return subjects
+#def compile_playable_podcast0(soup0):
+#    items = [{
+#		    'label': 'Sputnik - USA',
+#        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+#        	    'path': 'http://icecast-ruvr.cdnvideo.ru/rian.voiceusa',
+#        	    'is_playable': True},
+#           	    {'label': 'Sputnik - English',
+#        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+#        	    'path': 'http://audio1.video.ria.ru/voiceeng',
+#        	    'is_playable': True},
+#		    {'label': 'Sputnik - French',
+#        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+#        	    'path': 'https://nfw.ria.ru/flv/audio.aspx?ID=40881855&type=mp3',
+#        	    'is_playable': True},
+#		    {'label': 'Sputnik - German',
+#        	    'thumbnail': 'https://cdn2.img.sputniknews.com/i/logo-white-inverse.png',
+#        	    'path': 'http://audio1.video.ria.ru/voiceeng',
+#        	    'is_playable': True},
+#]
+#    return items
 
 def get_playable_podcast1(soup1):
     subjects = []
@@ -383,35 +430,6 @@ def compile_playable_podcast9(playable_podcast9):
     })
     return items
 
-def get_playable_podcast10(soup10):
-    subjects = []
-    for content in soup10.find_all('item'):
-        try:        
-            link = content.find('enclosure')
-            link = link.get('url')
-            print("\n\nLink: ", link)
-            title = content.find('title')
-            title = title.get_text()
-        except AttributeError:
-            continue
-        item = {
-                'url': link,
-                'title': title,
-                'thumbnail': "https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/97/f3/45/97f3451c-a6cc-9dd6-704c-80e3a0e2c5c1/source/100x100bb.jpg",
-        }
-        subjects.append(item)
-    return subjects
-def compile_playable_podcast10(playable_podcast10):
-    items = []
-    for podcast in playable_podcast10:
-        items.append({
-            'label': podcast['title'],
-            'thumbnail': podcast['thumbnail'],
-            'path': podcast['url'],
-            'is_playable': True,
-    })
-    return items
-
 def get_playable_podcast11(soup11):
     subjects = []
     for content in soup11.find_all('item'):
@@ -433,6 +451,35 @@ def get_playable_podcast11(soup11):
 def compile_playable_podcast11(playable_podcast11):
     items = []
     for podcast in playable_podcast11:
+        items.append({
+            'label': podcast['title'],
+            'thumbnail': podcast['thumbnail'],
+            'path': podcast['url'],
+            'is_playable': True,
+    })
+    return items
+
+def get_playable_podcast11(soup12):
+    subjects = []
+    for content in soup12.find_all('item'):
+        try:        
+            link = content.find('enclosure')
+            link = link.get('url')
+            print("\n\nLink: ", link)
+            title = content.find('title')
+            title = title.get_text()
+        except AttributeError:
+            continue
+        item = {
+                'url': link,
+                'title': title,
+                'thumbnail': "https://cdn3.img.sputniknews.com/images/105617/96/1056179634.png",
+        }
+        subjects.append(item)
+    return subjects
+def compile_playable_podcast12(playable_podcast12):
+    items = []
+    for podcast in playable_podcast12:
         items.append({
             'label': podcast['title'],
             'thumbnail': podcast['thumbnail'],

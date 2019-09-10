@@ -13,6 +13,7 @@ url8 = "https://www.spreaker.com/show/2795762/episodes/feed" #SPECIALS
 url9 = "https://www.spreaker.com/show/1843699/episodes/feed" #SPUTNIKINTERVIEWS
 url10 = "https://apps.apple.com/us/app/sputnik-trending/id1093760760" #SPUTNIKTRENDING
 url11 = "https://www.spreaker.com/show/1843710/episodes/feed" #UNANIMOUSDISSENT
+url12 = "https://sputniknews.com/export/rss2/podcast/radio_trendstorm/" #RADIOTRENDSTORM
 
 #COULDNTFIND:#MOTHEROFALLTALKSHOWS#DOUBLEDOWN#SHOOTFROMTHELIP
 #livestreamurl = "http://icecast-ruvr.cdnvideo.ru/rian.voiceusa"
@@ -25,10 +26,14 @@ url11 = "https://www.spreaker.com/show/1843710/episodes/feed" #UNANIMOUSDISSENT
 def main_menu():
     items = [
         {
-            'label': plugin.get_string(30099), 
-            'path': plugin.url_for('episodes0'),
-            'thumbnail': "https://cdn2.img.sputniknews.com/i/logo-white-inverse.png",
-            'is_playable': True},
+            'label': plugin.get_string(30099),
+            'path': plugin.url_for('new_to_criminal'),
+            'thumbnail': "https://cdn2.img.sputniknews.com/i/logo-white-inverse.png"},
+#        {
+#            'label': plugin.get_string(30099), 
+#            'path': plugin.url_for('episodes0'),
+#            'thumbnail': "https://cdn2.img.sputniknews.com/i/logo-white-inverse.png",
+#            'is_playable': True},
         {
             'label': plugin.get_string(30001),
             'path': plugin.url_for('episodes1'),
@@ -66,22 +71,29 @@ def main_menu():
             'path': plugin.url_for('episodes9'),
             'thumbnail': "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_320/images.spreaker.com/original/3ab164980e3fb650a1b7827c429ad773.jpg"},
         {
-            'label': plugin.get_string(30010), 
-            'path': plugin.url_for('episodes10'),
-            'thumbnail': "https://is3-ssl.mzstatic.com/image/thumb/Purple123/v4/97/f3/45/97f3451c-a6cc-9dd6-704c-80e3a0e2c5c1/source/100x100bb.jpg"},
-        {
             'label': plugin.get_string(30011), 
             'path': plugin.url_for('episodes11'),
             'thumbnail': "https://d3wo5wojvuv7l.cloudfront.net/t_square_limited_320/images.spreaker.com/original/ed42474fe8c483e721e26df3657d20d6.jpg"},
+        {
+            'label': plugin.get_string(30012), 
+            'path': plugin.url_for('episodes12'),
+            'thumbnail': "https://cdn3.img.sputniknews.com/images/105617/96/1056179634.png"},
     ]
     return items
 
-@plugin.route('/episodes0/')
-def episodes0():
+@plugin.route('/new_to_criminal/')
+def new_to_criminal():
     #soup = criminalpodcast.compile_new_to_criminal(URL)
-    playable_podcast0 = mainaddon.get_playable_podcast0
-    items = mainaddon.compile_playable_podcast0(playable_podcast0)
+    compile_ntc = mainaddon.get_new_to_criminal
+    items = mainaddon.compile_new_to_criminal(compile_ntc)
     return items
+
+#@plugin.route('/episodes0/')
+#def episodes0():
+#    soup0 = mainaddon.get_soup0(url0)
+#    playable_podcast0 = mainaddon.get_playable_podcast0(soup0)
+#    items = mainaddon.compile_playable_podcast0(soup0)
+#    return items
 
 @plugin.route('/episodes1/')
 def episodes1():
@@ -146,18 +158,18 @@ def episodes9():
     items = mainaddon.compile_playable_podcast9(playable_podcast9)
     return items
 
-@plugin.route('/episodes10/')
-def episodes10():
-    soup10 = mainaddon.get_soup10(url10)
-    playable_podcast10 = mainaddon.get_playable_podcast10(soup10)
-    items = mainaddon.compile_playable_podcast10(playable_podcast10)
-    return items
-
 @plugin.route('/episodes11/')
 def episodes11():
     soup11 = mainaddon.get_soup11(url11)
     playable_podcast11 = mainaddon.get_playable_podcast11(soup11)
     items = mainaddon.compile_playable_podcast11(playable_podcast11)
+    return items
+
+@plugin.route('/episodes12/')
+def episodes12():
+    soup11 = mainaddon.get_soup12(url12)
+    playable_podcast12 = mainaddon.get_playable_podcast12(soup12)
+    items = mainaddon.compile_playable_podcast12(playable_podcast12)
     return items
 
 if __name__ == '__main__':
